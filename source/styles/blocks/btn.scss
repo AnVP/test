@@ -1,0 +1,53 @@
+.btn {
+  @include normal-size;
+
+  display: inline-block;
+  box-sizing: border-box;
+
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $white-color;
+
+  background-color: $blue-color;
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: $disabled-color;
+
+    cursor: text;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  &--accent {
+    background-color: $red-color;
+  }
+
+  &--small {
+    @include small-size;
+  }
+
+  &--medium {
+    @include medium-size;
+  }
+
+  &--large {
+    @include large-size;
+  }
+}
